@@ -97,7 +97,9 @@ a{
     width: 4.6rem;
     height: 4.4rem;
     margin-right: 3rem;
-    flex: none
+    flex: none;
+    cursor: pointer;
+    
 }
 
 .carrito span {
@@ -113,7 +115,9 @@ a{
     height: 4.6rem;
     margin-top: .2rem
 }
-
+.carrito svg :hover{
+    box-shadow: 0 .4rem 1.4rem rgba(0,0,0,.1);
+}
 .btn-login {
     background: var(--verde);
     color: #fff;
@@ -180,7 +184,9 @@ a{
 .busqueda .inp .txt {
     flex: 1
 }
-
+.inp{
+    cursor: pointer;
+}
 .busqueda .inp i {
     font-style: normal;
     font-size: 1.3rem;
@@ -405,19 +411,40 @@ a{
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     border: .1rem solid var(--gris-borde);
     border-radius: .4rem;
-    padding: .8rem .8rem 1.1rem
+    padding: .8rem .8rem 1.1rem;
+     width: 80%;           /* Ocupa todo el ancho disponible de la tarjeta */
+    height: auto;      /* Ajusta la altura fija que desees para tus imágenes */
+    overflow: hidden;      /* Oculta cualquier parte de la imagen que sobresalga */
+    position: relative
 }
-
+.card:hover {
+  box-shadow: 0 .4rem 1.4rem rgba(0,0,0,.1);
+  cursor: pointer;
+}
 .card .img {
+     display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     aspect-ratio: 133/118;
     background: var(--gris-img);
     border-radius: .2rem;
     position: relative
 }
+img {
+    width:auto;
+    height:100%;
+    object-fit: cover; 
+    position: absolute; 
+    overflow: hidden;     /* Mantiene la proporción de la imagen cubriendo todo el espacio sin deformarse */
+}
 
-.card .img::before {
+/* .card .img::before {
     content: "";
     position: absolute;
     left: 22%;
@@ -437,7 +464,7 @@ a{
     height: 1.6rem;
     border: .6rem solid #d3d3d3;
     border-radius: 50%
-}
+} */
 
 .card p {
     margin-top: .9rem;
@@ -470,7 +497,8 @@ a{
     display: flex;
     align-items: center;
     padding: 0 .7rem;
-    gap: .4rem
+    gap: .4rem;
+    cursor: pointer;
 }
 
 .pag .pv {
@@ -482,7 +510,9 @@ a{
     align-items: center;
     gap: .3rem
 }
-
+span{
+    cursor: pointer;
+}
 .pag .pgs span {
     min-width: 1.8rem;
     height: 1.8rem;
@@ -540,7 +570,8 @@ footer {
 
 /* ── MODAL ── */
 .modal {
-    background: #fff;
+    background:#F5F5F5;
+;
     border-radius: 1.2rem;
     width: clamp(30rem, 38vw, 52rem);
     padding: 3rem 3.6rem 2.4rem;
