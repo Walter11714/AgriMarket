@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
-    <title>Registro - Agrimarket</title>
+    <title>Carrito - Agrimarket</title>
 </head>
 <body>
 <div class="page">
 
-    <!-- HEADER (Tomado del index) -->
+    <!-- HEADER -->
     <header>
         <div class="logo"><img src="assets/logo.png" alt="Logo AgriMarket" class="logo"></div>
         <div class="hdr-right">
-            <div class="precio"><sup>$</sup>255.000<small>/ cop</small></div>
+            <div class="precio"><sup>$</sup>134.000<small> / cop</small></div>
             <div class="carrito">
-                <span>5</span>
+                <span>3</span>
                 <svg viewBox="0 0 48 48" fill="none" stroke="#222" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h6l5 21h22l5-15H12"/><circle cx="17" cy="40" r="2.5" fill="#222"/><circle cx="33" cy="40" r="2.5" fill="#222"/></svg>
             </div>
             <button class="btn-login"><a href="login.html">Iniciar Sesión</a></button>
@@ -27,154 +27,121 @@
     </header>
 
     <!-- CUERPO DEL CARRITO -->
-     <main class="carrito-main">
+    <main class="carrito-main">
 
-    <div class="titulo-carrito">
-
-        <div class="icono-carrito">
-            🛒
+        <div class="titulo-carrito">
+            <svg class="icono-carrito-titulo" viewBox="0 0 48 48" fill="none" stroke="#2e7d32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h6l5 21h22l5-15H12"/><circle cx="17" cy="40" r="2.5" fill="#2e7d32"/><circle cx="33" cy="40" r="2.5" fill="#2e7d32"/></svg>
+            <h1>Carrito</h1>
         </div>
 
-        <h1>Carrito</h1>
+        <div class="carrito-grid">
 
-    </div>
+            <!-- PRODUCTOS -->
+            <section class="carrito-lista">
 
-    <div class="carrito-contenedor">
+                <article class="carrito-item">
+                    <div class="item-img">
+                        <img src="assets/mojarra.png" alt="Mojarra">
+                    </div>
+                    <div class="item-info">
+                        <h3>Mojarra (pescado)</h3>
+                        <p>Pescado entero, fresco del día, directo de piscicultores locales</p>
+                        <span class="cantidad-label"><strong>Cant.</strong> 4</span>
+                        <div class="item-precio">$50.000 <small>cop</small></div>
+                    </div>
+                    <div class="item-acciones">
+                        <button class="btn-icono btn-borrar">🗑</button>
+                        <button class="btn-icono">+</button>
+                        <button class="btn-icono">-</button>
+                    </div>
+                </article>
 
-        <!-- PRODUCTOS -->
+                <article class="carrito-item">
+                    <div class="item-img">
+                        <img src="assets/maiz.jpg" alt="Maíz">
+                    </div>
+                    <div class="item-info">
+                        <h3>Maíz (grano)</h3>
+                        <p>Granos de maíz dulce, ideales para arepas o mazamorra</p>
+                        <span class="cantidad-label"><strong>Cant.</strong> 20</span>
+                        <div class="item-precio">$70.000</div>
+                    </div>
+                    <div class="item-acciones">
+                        <button class="btn-icono btn-borrar">🗑</button>
+                        <button class="btn-icono">+</button>
+                        <button class="btn-icono">-</button>
+                    </div>
+                </article>
 
-        <section class="lista-productos">
+                <article class="carrito-item">
+                    <div class="item-img">
+                        <img src="assets/tomates.jpg" alt="Tomate">
+                    </div>
+                    <div class="item-info">
+                        <h3>Tomate</h3>
+                        <p>Tomate fresco, rojo y firme, perfecto para tus guisos y ensaladas</p>
+                        <span class="cantidad-label"><strong>Cant.</strong> 5</span>
+                        <div class="item-precio">$14.000</div>
+                    </div>
+                    <div class="item-acciones">
+                        <button class="btn-icono btn-borrar">🗑</button>
+                        <button class="btn-icono">+</button>
+                        <button class="btn-icono">-</button>
+                    </div>
+                </article>
 
-            <article class="producto-carrito">
+            </section>
 
-                <img src="assets/mojarra.jpg" alt="Mojarra">
+            <!-- FORMULARIO DE PAGO -->
+            <aside class="carrito-pago">
+                <form class="form-pago">
+                    
+                    <div class="opcion-entrega">
+                        <label>
+                            <input type="radio" name="entrega" checked>
+                            Recoger en tienda
+                        </label>
+                        <label>
+                            <input type="radio" name="entrega">
+                            Domicilio
+                        </label>
+                    </div>
 
-                <div class="producto-info">
+                    <div class="pago-campo">
+                        <label>Nombre de la persona que paga</label>
+                        <input type="text" placeholder="Escribe el nombre de quien recibe el pedido">
+                    </div>
 
-                    <h3>Mojarra (pescado)</h3>
+                    <div class="pago-campo">
+                        <label>Celular</label>
+                        <input type="text" placeholder="Escribe tu celular">
+                    </div>
 
-                    <p>
-                        Pescado entero, fresco del día,
-                        directo de piscicultores locales.
-                    </p>
+                    <div class="pago-campo">
+                        <label>Correo electrónico</label>
+                        <input type="text" placeholder="Escribe tu correo">
+                    </div>
 
-                    <strong>Cant.</strong>
+                    <div class="pago-campo">
+                        <label>Fecha de entrega</label>
+                        <input type="text" placeholder="Seleccione">
+                    </div>
 
-                    <span>4</span>
+                    <div class="pago-campo">
+                        <label>Método de pago</label>
+                        <input type="text" placeholder="Seleccione">
+                    </div>
 
-                    <h4>$50.000</h4>
+                    <button type="submit" class="btn-pagar">
+                        Pagar
+                    </button>
 
-                </div>
+                </form>
+            </aside>
 
-                <div class="acciones-carrito">
+        </div>
+    </main>
 
-                    <button>🗑</button>
-                    <button>+</button>
-                    <button>-</button>
-
-                </div>
-
-            </article>
-
-            <article class="producto-carrito">
-
-                <img src="assets/maiz.jpg" alt="Maíz">
-
-                <div class="producto-info">
-
-                    <h3>Maíz (grano)</h3>
-
-                    <p>
-                        Granos de maíz dulce,
-                        ideales para arepas o mazamorra.
-                    </p>
-
-                    <strong>Cant.</strong>
-
-                    <span>20</span>
-
-                    <h4>$70.000</h4>
-
-                </div>
-
-                <div class="acciones-carrito">
-
-                    <button>🗑</button>
-                    <button>+</button>
-                    <button>-</button>
-
-                </div>
-
-            </article>
-
-            <article class="producto-carrito">
-
-                <img src="assets/tomate.jpg" alt="Tomate">
-
-                <div class="producto-info">
-
-                    <h3>Tomate</h3>
-
-                    <p>
-                        Tomate fresco, rojo y firme,
-                        perfecto para ensaladas.
-                    </p>
-
-                    <strong>Cant.</strong>
-
-                    <span>5</span>
-
-                    <h4>$14.000</h4>
-
-                </div>
-
-                <div class="acciones-carrito">
-
-                    <button>🗑</button>
-                    <button>+</button>
-                    <button>-</button>
-
-                </div>
-
-            </article>
-
-        </section>
-
-        <!-- FORMULARIO -->
-
-        <aside class="panel-pago">
-
-            <form class="form-pago">
-
-                <label>
-                    <input type="radio" name="entrega">
-                    Recoger en tienda
-                </label>
-
-                <label>
-                    <input type="radio" name="entrega">
-                    Domicilio
-                </label>
-
-                <input type="text" placeholder="Nombre del cliente">
-                <input type="text" placeholder="Ciudad">
-                <input type="text" placeholder="Barrio">
-                <input type="text" placeholder="Dirección">
-                <input type="text" placeholder="Método de pago">
-
-                <button type="submit" class="btn-pagar">
-                    Pagar
-                </button>
-
-            </form>
-
-        </aside>
-
-    </div>
-
-</main>
-
-<!-- FOOTER (Tomado del index) -->
     <footer></footer>
 </div>
 </body>

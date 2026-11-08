@@ -718,3 +718,221 @@ footer {
     color: #aaa;
     margin-top: 1.1rem
 }
+
+/* =========================================
+   ESTILOS PARA EL CARRITO DE COMPRAS
+   ========================================= */
+
+.carrito-main {
+    flex: 1;
+    padding: 2rem 4rem;
+    max-width: 150rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.carrito-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.icono-carrito-titulo {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.carrito-header h2 {
+    font-size: 2.8rem;
+    color: #111;
+}
+
+.carrito-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr; /* 2 columnas: productos y pago */
+    gap: 3rem;
+    align-items: start;
+}
+
+/* --- Lista de Productos --- */
+.carrito-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-item {
+    display: flex;
+    border: .1rem solid var(--gris-borde);
+    border-radius: .8rem;
+    padding: 1.5rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.item-img {
+    width: 12rem;
+    height: 10rem;
+    flex: none;
+    background: #f4f4f4;
+    border-radius: .6rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h3 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: .4rem;
+}
+
+.item-info p {
+    font-size: 1rem;
+    color: var(--suave);
+    margin-bottom: 1.2rem;
+}
+
+.cantidad-label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+.item-precio {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.item-precio small {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.item-acciones {
+    display: flex;
+    gap: .5rem;
+    align-items: flex-start;
+}
+
+.btn-icono {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #f0f0f0;
+    border: none;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.btn-icono:hover {
+    background: #e0e0e0;
+}
+
+.btn-icono svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.btn-borrar {
+    background: transparent;
+}
+
+.btn-borrar:hover {
+    background: #ffebee;
+}
+
+.btn-borrar:hover svg {
+    stroke: #d32f2f;
+}
+
+/* --- Panel de Pago --- */
+.carrito-pago {
+    background: var(--verde-claro);
+    padding: 2rem;
+    border-radius: .8rem;
+}
+
+.opcion-entrega {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 1.5rem;
+}
+
+.opcion-entrega label {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #fff;
+    padding: .8rem 1rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.pago-campo {
+    margin-bottom: 1.2rem;
+}
+
+.pago-campo label {
+    display: block;
+    font-size: .9rem;
+    color: #333;
+    margin-bottom: .4rem;
+}
+
+.pago-campo input {
+    width: 100%;
+    height: 3.2rem;
+    border: none;
+    border-radius: .4rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.btn-pagar {
+    width: 100%;
+    background: var(--verde);
+    color: #fff;
+    border: none;
+    border-radius: .4rem;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-pagar:hover {
+    background: #256528;
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 992px) {
+    .carrito-grid {
+        grid-template-columns: 1fr;
+    }
+}
