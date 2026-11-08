@@ -718,3 +718,120 @@ footer {
     color: #aaa;
     margin-top: 1.1rem
 }
+
+/* =========================================
+   ESTILOS PARA LA PANTALLA DE REGISTRO
+   ========================================= */
+
+.registro-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+}
+
+.registro-container {
+    width: 100%;
+    max-width: 85rem; /* Ancho máximo del formulario */
+}
+
+.registro-form {
+    display: flex;
+    gap: 3rem; /* Separación entre las dos columnas superiores */
+    margin-bottom: 2rem;
+}
+
+.registro-col {
+    flex: 1;
+}
+
+.registro-bottom {
+    display: flex;
+    gap: 3rem;
+}
+
+.registro-col-izq {
+    flex: 1;
+}
+
+.registro-col-der {
+    flex: 1;
+    display: flex;
+    align-items: flex-end; /* Alinea el botón abajo a la derecha */
+    justify-content: center;
+    padding-bottom: 1.4rem; /* Compensa el margen del campo de arriba */
+}
+
+/* Estilos de los campos */
+.campo-registro {
+    border: .1rem solid var(--gris-borde);
+    border-radius: .6rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #fff;
+}
+
+.campo-registro label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: .8rem;
+}
+
+.campo-registro input,
+.campo-registro select {
+    width: 100%;
+    height: 3.2rem;
+    border: .1rem solid #e0e0e0;
+    border-radius: .4rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #555;
+    outline: none;
+}
+
+.campo-registro input::placeholder {
+    color: #b0b0b0;
+}
+
+.campo-registro input:focus,
+.campo-registro select:focus {
+    border-color: var(--verde);
+}
+
+/* Botón de Registrarse */
+.btn-registrarse {
+    background: var(--verde);
+    color: #fff;
+    border: none;
+    border-radius: .6rem;
+    padding: 1.2rem 5rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.btn-registrarse:hover {
+    background: #256528;
+}
+
+/* Ajuste responsivo para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .registro-form,
+    .registro-bottom {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .registro-col-der {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .btn-registrarse {
+        width: 100%;
+    }
+}
