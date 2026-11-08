@@ -78,7 +78,8 @@ a {
     font-weight: 700;
     color: #111;
     margin-right: 3.4rem;
-    white-space: nowrap
+    white-space: nowrap;
+    cursor: default;
 }
 
 .precio sup {
@@ -251,9 +252,13 @@ a {
     border-radius: .8rem;
     font-size: .9rem;
     padding: .3rem .6rem;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    cursor: pointer;
+    
 }
-
+.x{
+    cursor: pointer;
+}
 .chip i {
     font-style: normal;
     font-size: 1rem
@@ -373,7 +378,8 @@ a {
     align-items: center;
     padding: 0 .8rem;
     font-size: .85rem;
-    color: #aaa
+    color: #aaa;
+    cursor: pointer;
 }
 
 .search svg {
@@ -394,7 +400,9 @@ a {
     background: #f1f1f1;
     color: #555
 }
-
+.on{
+    cursor: pointer;
+}
 .orden span.on {
     background: var(--negro);
     color: #fff
