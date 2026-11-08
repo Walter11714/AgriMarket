@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets\logo.png" type="image/x-icon">
+    <title>AgriMarket - Panel Administrativo</title>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="logo"><img src="assets\logo.png" alt="" class="logo"></div>
+    <div class="hdr-right">
+      <div class="precio"><sup>$</sup>134.000<small>/ cop</small></div>
+      <div class="carrito">
+        <span>5</span>
+        <a href="carrito.html"><svg viewBox="0 0 48 48" fill="none" stroke="#222" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h6l5 21h22l5-15H12"/><circle cx="17" cy="40" r="2.5" fill="#222"/><circle cx="33" cy="40" r="2.5" fill="#222"/></svg></a>
+      </div>
+      <button class="btn-login"><a href="admin.html">Admin</a></button>
+      <button class="btn-login"><a href="login.html">Iniciar Sesión</a></button>
+      <div class="avatar">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#fff" stroke-width="3"><circle cx="26" cy="19" r="8"/><path d="M8 46c0-10 8-15 18-15s18 5 18 15"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin">
+    <div class="top">
+      <div>
+        <h1>Panel administrativo</h1>
+        <p class="admin-lead">Administración de usuarios y moderación de publicaciones del sistema.</p>
+      </div>
+      <div class="search">Buscar
+        <svg viewBox="0 0 10 10" fill="none" stroke="#222" stroke-width="1.2"><circle cx="4" cy="4" r="3"/><path d="M6.5 6.5L9 9"/></svg>
+      </div>
+    </div>
+
+    <nav class="orden admin-nav" aria-label="Secciones del panel">
+      <a href="#usuarios">Usuarios</a>
+      <a href="#publicaciones">Publicaciones</a>
+    </nav>
+
+    <section id="publicaciones" class="admin-sec">
+      <div class="admin-head">
+        <h2>Moderación de publicaciones</h2>
+      </div>
+      <div class="orden admin-filtro">
+        <span class="on">Todas</span>
+        <span>Activas</span>
+        <span>Inactivas</span>
+      </div>
+
+      <div class="admin-tabla-wrap">
+        <table class="admin-tabla">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Vendedor</th>
+              <th>Precio</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mojarra fresca x libra</td>
+              <td>Ana Ruiz</td>
+              <td>$12.500</td>
+              <td>Activa</td>
+              <td class="admin-acc">
+                <button type="button" class="btn-acc">Ver</button>
+                <button type="button" class="btn-acc">Editar</button>
+                <button type="button" class="btn-acc">Inactivar</button>
+                <button type="button" class="btn-acc btn-acc-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maiz (grano)</td>
+              <td>Ana Ruiz</td>
+              <td>$3.500</td>
+              <td class="estado-inactivo">Inactiva</td>
+              <td class="admin-acc">
+                <button type="button" class="btn-acc">Ver</button>
+                <button type="button" class="btn-acc">Editar</button>
+                <button type="button" class="btn-acc">Inactivar</button>
+                <button type="button" class="btn-acc btn-acc-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Paq. verduras variadas</td>
+              <td>Luis Mora</td>
+              <td>$15.000</td>
+              <td>Activa</td>
+              <td class="admin-acc">
+                <button type="button" class="btn-acc">Ver</button>
+                <button type="button" class="btn-acc">Editar</button>
+                <button type="button" class="btn-acc">Inactivar</button>
+                <button type="button" class="btn-acc btn-acc-eliminar">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <nav class="pag" aria-label="Paginación">
+        <div class="pv">← Previous</div>
+        <div class="pgs"><span class="on">1</span><span>2</span><span>3</span></div>
+        <div class="nx">Next →</div>
+      </nav>
+
+      <form class="admin-form" action="#publicaciones">
+        <h3>Crear o editar publicación</h3>
+        <div class="admin-campos">
+          <label>Producto<input type="text" name="producto" value="Mojarra fresca x libra"></label>
+          <label>Vendedor<input type="text" name="vendedor" value="Ana Ruiz"></label>
+          <label>Precio<input type="text" name="precio" value="$12.500"></label>
+          <label>Estado
+            <select name="estado">
+              <option selected>Activa</option>
+              <option>Inactiva</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit" class="btn-login">Guardar</button>
+      </form>
+    </section>
+
+    <section id="usuarios" class="admin-sec">
+      <div class="admin-head">
+        <h2>Gestión de usuarios</h2>
+        <a class="btn-login" href="#form-usuario">Crear usuario</a>
+      </div>
+      <div class="orden admin-filtro">
+        <span class="on">Todos</span>
+        <span>Comprador</span>
+        <span>Productor</span>
+        <span>Administrador</span>
+      </div>
+
+      <div class="admin-tabla-wrap">
+        <table class="admin-tabla">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana Ruiz</td>
+              <td>ana.ruiz@correo.com</td>
+              <td>Productor</td>
+              <td>Activo</td>
+              <td class="admin-acc">
+                <button type="button" class="btn-acc">Ver</button>
+                <button type="button" class="btn-acc">Editar</button>
+                <button type="button" class="btn-acc btn-acc-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Luis Mora</td>
+              <td>luis.mora@correo.com</td>
+              <td>Comprador</td>
+              <td>Activo</td>
+              <td class="admin-acc">
+                <button type="button" class="btn-acc">Ver</button>
+                <button type="button" class="btn-acc">Editar</button>
+                <button type="button" class="btn-acc btn-acc-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Marta Díaz</td>
+              <td>marta.diaz@correo.com</td>
+              <td>Administrador</td>
+              <td>Activo</td>
+              <td class="admin-acc">
+                <button type="button" class="btn-acc">Ver</button>
+                <button type="button" class="btn-acc">Editar</button>
+                <button type="button" class="btn-acc btn-acc-eliminar">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <nav class="pag" aria-label="Paginación">
+        <div class="pv">← Previous</div>
+        <div class="pgs"><span class="on">1</span><span>2</span><span>3</span></div>
+        <div class="nx">Next →</div>
+      </nav>
+
+      <form id="form-usuario" class="admin-form" action="#usuarios">
+        <h3>Crear o editar usuario</h3>
+        <div class="admin-campos">
+          <label>Nombre<input type="text" name="nombre" value="Ana Ruiz"></label>
+          <label>Correo<input type="email" name="correo" value="ana.ruiz@correo.com"></label>
+          <label>Rol
+            <select name="rol">
+              <option>Comprador</option>
+              <option selected>Productor</option>
+              <option>Administrador</option>
+            </select>
+          </label>
+          <label>Estado
+            <select name="estado">
+              <option selected>Activo</option>
+              <option>Inactivo</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit" class="btn-login">Guardar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer></footer>
+</div>
+</body>
+</html>
